@@ -34,10 +34,11 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     supported_processor=input("Enter the Supported Processor(Ex: AMD Ryzen):")
     print("Select the Supported Ram Type:")
     print("1. DDR4 2. DDR5")
-    if input("Enter the Supported Ram Type:") == "1" or input("Enter the Supported Ram Type:").lower() == "ddr4":
+    input_ram_type=input("Enter the Supported Ram Type:")
+    if input_ram_type == "1" or input_ram_type.lower() == "ddr4":
         supported_ram_type="DDR4"
         custom_attribute_ram_type="DDR 4"
-    elif input("Enter the Supported Ram Type:") == "2" or input("Enter the Supported Ram Type:").lower() == "ddr5":
+    elif input_ram_type == "2" or input_ram_type.lower() == "ddr5":
         supported_ram_type="DDR5"
         custom_attribute_ram_type="DDR 5"
     max_memory_support=input("Max Memory Support(Ex: 64):")
