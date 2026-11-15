@@ -21,9 +21,10 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     product_category="Motherboard"
     print(f"You have selected {product_category}. Please provide the following details:")
     print("Enter the Motherboard Platform 1. AMD 2.Intel):")
-    if input("Enter the Motherboard Platform:") == "1" or input("Enter the Motherboard Platform:").lower() == "amd":
+    input_platform=input("Enter the Motherboard Platform:")
+    if input_platform == "1" or input_platform.lower() == "amd":
         motherboard_platform="AMD"
-    elif input("Enter the Motherboard Platform:") == "2" or input("Enter the Motherboard Platform:").lower() == "intel":
+    elif input_platform == "2" or input_platform.lower() == "intel":
         motherboard_platform="Intel"
     product_brand=input("Enter the Brand name(Ex: MSI):")
     product_model=input("Enter the Product Model(Ex: MAG B450M):")
