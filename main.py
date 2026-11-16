@@ -1,3 +1,5 @@
+import datetime
+
 print("Welcome to the Lazy Listers!")
 print("This tool will help you generate product information for your e-commerce store.")
 print("Please select the product category from the following options:")
@@ -59,6 +61,8 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
         motherboard_ram_channel_type="Single Channel"
     elif input_ram_channel_type == "2" or input_ram_channel_type.lower().replace(" ","") =="dualchannel":
         motherboard_ram_channel_type="Dual Channel"
+    else:
+        motherboard_ram_channel_type=""
 
 
     product_Name=(product_brand+" "+product_category+" "+" "+product_model+", "+motherboard_size+", "+cpu_socket+", "+supported_processor+", "+supported_ram_type+" Ram")
@@ -67,7 +71,23 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     meta_tag_description=(product_brand+" "+product_model+" | "+motherboard_size+" "+product_category+" | Supports "+supported_processor+" Processors, "+cpu_socket+" | Max "+ max_memory_support+"GB "+supported_ram_type+" "+max_memory_speed+"Mhz Memory | PCIe "+supported_pcie_slot+" Slot")
     product_sku=(product_brand+"-"+product_model).upper().replace(" ","-")
     seo_url=(product_brand+"-"+product_model+"-"+product_category).lower().replace(" ","-")
-    
+    product_status="Enabled"
+    product_tax_class="--- None ---"
+    product_quantity="0"
+    product_minimum_quantity="1"
+    product_substract_stock="Yes"
+    product_OOS_Status="Out Of Stock"
+    product_require_shipping="Yes"
+    today= datetime.date.today()
+    product_length=0
+    product_height=0
+    product_width=0
+    product_weight=""
+    product_weight_class="Kilogram"
+    product_sort_order="0"
+    Product_manufacture=""
+    Product_categories=""
+    Product_stores="0, 1"
 
     with open("output.txt", "w") as f:
         f.write("Product Name: " + product_Name + "\n")
@@ -77,7 +97,7 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
         f.write("SKU: "+product_sku+"\n")
         f.write("SEO URL: " + seo_url + "\n")
         f.write("Product Sheet: "+ "\n")
-        f.write("" + "\t" +product_Name+"\t"+product_model+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\n")
+        f.write("" + "\t" +product_Name+"\t"+product_model+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\n")
         f.write("Attribute Sheet: "+ "\n")
         f.write("Motherboard  >  Platform "+"\t"+motherboard_platform + "\n")
         f.write("Motherboard  >  Socket "+"\t"+cpu_socket + "\n")
