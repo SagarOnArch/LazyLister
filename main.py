@@ -71,7 +71,7 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     meta_tag_description=(product_brand+" "+product_model+" | "+motherboard_size+" "+product_category+" | Supports "+supported_processor+" Processors, "+cpu_socket+" | Max "+ max_memory_support+"GB "+supported_ram_type+" "+max_memory_speed+"Mhz Memory | PCIe "+supported_pcie_slot+" Slot")
     product_sku=(product_brand+"-"+product_model).upper().replace(" ","-")
     seo_url=(product_brand+"-"+product_model+"-"+product_category).lower().replace(" ","-")
-    product_status="Enabled"
+    product_status="Disabled"
     product_tax_class="--- None ---"
     product_quantity="0"
     product_minimum_quantity="1"
@@ -97,7 +97,7 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
         f.write("SKU: "+product_sku+"\n")
         f.write("SEO URL: " + seo_url + "\n")
         f.write("Product Sheet: "+ "\n")
-        f.write("" + "\t" +product_Name+"\t"+product_model+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\n")
+        f.write("" + "\t" +product_Name+"\t"+product_model.replace(" ","-")+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\t"+product_quantity+"\t"+product_minimum_quantity+"\t"+""+"\t"+product_substract_stock+"\t"+product_OOS_Status+"\t"+product_require_shipping+"\t"+f"0:{seo_url}, 1:{seo_url}"+"\t"+f"'{today}"+"\t"+product_length+"\n")
         f.write("Attribute Sheet: "+ "\n")
         f.write("Motherboard  >  Platform "+"\t"+motherboard_platform + "\n")
         f.write("Motherboard  >  Socket "+"\t"+cpu_socket + "\n")
