@@ -49,11 +49,11 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     supported_pcie_slot=input("Supported PCIe Slot Version(Ex: 3.0):")
     motherboard_selling_price=int(input("Enter the Selling price of the motherboard:"))
     if motherboard_selling_price <= 10000:
-        custom_attribute_motherboard_wattage="60W"
+        custom_attribute_motherboard_wattage="60 W"
     elif motherboard_selling_price <= 20000:
-        custom_attribute_motherboard_wattage="80W"
+        custom_attribute_motherboard_wattage="80 W"
     else:
-        custom_attribute_motherboard_wattage="100W"
+        custom_attribute_motherboard_wattage="100 W"
     print("Select the Supported Ram Channel Type:")
     print("1. Single Channel 2. Dual Channel")
     input_ram_channel_type=input("Enter the Supported Ram Channel Type:")
