@@ -97,7 +97,7 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
         f.write("SKU: "+product_sku+"\n")
         f.write("SEO URL: " + seo_url + "\n")
         f.write("Product Sheet: "+ "\n")
-        f.write("" + "\t" +product_Name+"\t"+product_model.replace(" ","-")+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\t"+product_quantity+"\t"+product_minimum_quantity+"\t"+""+"\t"+product_substract_stock+"\t"+product_OOS_Status+"\t"+product_require_shipping+"\t"+f"0:{seo_url}, 1:{seo_url}"+"\t"+f"'{today}"+"\t"+product_length+"\n")
+        f.write("" + "\t" +product_Name+"\t"+product_model.replace(" ","-")+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\t"+product_quantity+"\t"+product_minimum_quantity+"\t"+""+"\t"+product_substract_stock+"\t"+product_OOS_Status+"\t"+product_require_shipping+"\t"+f"0:{seo_url}, 1:{seo_url}"+"\t"+f"'{today}"+"\t"+product_length+"\t"+product_height+"\t"+product_width+"\t"+""+"\t"+product_weight+"\t"+product_weight_class+"\t"+product_sort_order+"\t"+product_brand+"\t"+""+"\t"+""+"\t"+Product_stores+"\n")
         f.write("Attribute Sheet: "+ "\n")
         f.write("Motherboard  >  Platform "+"\t"+motherboard_platform + "\n")
         f.write("Motherboard  >  Socket "+"\t"+cpu_socket + "\n")
