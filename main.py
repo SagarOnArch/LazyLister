@@ -79,15 +79,16 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
     product_OOS_Status="Out Of Stock"
     product_require_shipping="Yes"
     today= datetime.date.today()
-    product_length=0
-    product_height=0
-    product_width=0
+    product_length="0"
+    product_height="0"
+    product_width="0"
     product_weight=""
     product_weight_class="Kilogram"
     product_sort_order="0"
     Product_manufacture=""
     Product_categories=""
     Product_stores="0, 1"
+    product_sheet_model=product_model.upper().replace(" ","-")
 
     with open("output.txt", "w") as f:
         f.write("Product Name: " + product_Name + "\n")
@@ -97,7 +98,7 @@ elif input_category.lower() == "motherboard" or input_category.lower() == "3":
         f.write("SKU: "+product_sku+"\n")
         f.write("SEO URL: " + seo_url + "\n")
         f.write("Product Sheet: "+ "\n")
-        f.write("" + "\t" +product_Name+"\t"+product_model.replace(" ","-")+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\t"+product_quantity+"\t"+product_minimum_quantity+"\t"+""+"\t"+product_substract_stock+"\t"+product_OOS_Status+"\t"+product_require_shipping+"\t"+f"0:{seo_url}, 1:{seo_url}"+"\t"+f"'{today}"+"\t"+product_length+"\t"+product_height+"\t"+product_width+"\t"+""+"\t"+product_weight+"\t"+product_weight_class+"\t"+product_sort_order+"\t"+product_brand+"\t"+""+"\t"+""+"\t"+Product_stores+"\n")
+        f.write("" + "\t" +product_Name+"\t"+product_sheet_model+ "\t"+product_sku+"\t"+""+"\t"+meta_tag_description+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+""+"\t"+product_status+"\t"+product_tax_class+"\t"+product_quantity+"\t"+product_minimum_quantity+"\t"+""+"\t"+product_substract_stock+"\t"+product_OOS_Status+"\t"+product_require_shipping+"\t"+f"0:{seo_url}, 1:{seo_url}"+"\t"+f"'{today}"+"\t"+product_length+"\t"+product_height+"\t"+product_width+"\t"+""+"\t"+product_weight+"\t"+product_weight_class+"\t"+product_sort_order+"\t"+""+"\t"+product_brand.upper+"\t"+""+"\t"+""+"\t"+Product_stores+"\n")
         f.write("Attribute Sheet: "+ "\n")
         f.write("Motherboard  >  Platform "+"\t"+motherboard_platform + "\n")
         f.write("Motherboard  >  Socket "+"\t"+cpu_socket + "\n")
